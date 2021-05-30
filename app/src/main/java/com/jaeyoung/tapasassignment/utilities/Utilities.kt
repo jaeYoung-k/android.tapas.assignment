@@ -18,3 +18,13 @@ fun Context.getStatusBarHeight(): Int {
 
     return resources.getDimensionPixelSize(id)
 }
+
+fun convertCount(count: Int): String {
+    if (count < 1000) return "$count"
+    val exp = (Math.log(count.toDouble()) / Math.log(1000.0)).toInt()
+    return String.format(
+        "%.1f %c",
+        count / Math.pow(1000.0, exp.toDouble()),
+        "kMGTPE"[exp - 1]
+    )
+}
