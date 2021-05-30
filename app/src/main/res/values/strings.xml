@@ -6,4 +6,7 @@
 
     <string name="invalid_access_message">"잘못된 접근입니다."</string>
     <string name="common_error_message">다시 시도 해주세요.</string>
+
+    <string name="total_episodes">%d episodes</string>
+    <string name="scene_episode">%d episode</string>
 </resources>
