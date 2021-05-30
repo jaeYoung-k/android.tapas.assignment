@@ -38,3 +38,8 @@ fun convertCreatorListToString(creators: List<CreatorModel>): String {
         else -> ""
     }
 }
+
+fun convertDate(date: String, format: String): String {
+    val input = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).parse(date) ?: return ""
+    return SimpleDateFormat(format, Locale.getDefault()).format(input) ?: ""
+}
