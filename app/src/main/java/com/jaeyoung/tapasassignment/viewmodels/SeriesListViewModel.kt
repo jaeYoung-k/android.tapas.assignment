@@ -2,6 +2,7 @@ package com.jaeyoung.tapasassignment.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.jaeyoung.tapasassignment.R
 import com.jaeyoung.tapasassignment.api.SeriesService
 import com.jaeyoung.tapasassignment.data.BrowseModel
 import com.jaeyoung.tapasassignment.utilities.Resource
@@ -33,7 +34,7 @@ class SeriesListViewModel @Inject constructor(
                         _series.postValue(Resource.error(it.errorBody().toString(), null))
                     }
                 }) {
-                    _series.postValue(Resource.error("다시 시도 해주세요.", null))
+                    _series.postValue(Resource.error(R.string.common_error_message, null))
                 }
         )
     }
