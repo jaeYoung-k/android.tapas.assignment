@@ -28,3 +28,13 @@ fun convertCount(count: Int): String {
         "kMGTPE"[exp - 1]
     )
 }
+
+fun convertCreatorListToString(creators: List<CreatorModel>): String {
+    val size = creators.size
+    return when {
+        size > 2 -> "${creators[0].display_name.trim()} and $size more"
+        size > 1 -> "${creators[0].display_name.trim()} and ${creators[1].display_name.trim()}"
+        size > 0 -> creators[0].display_name.trim()
+        else -> ""
+    }
+}
