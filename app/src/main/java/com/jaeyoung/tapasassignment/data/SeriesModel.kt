@@ -12,7 +12,6 @@ data class SeriesModel(
     val type: String,
     val sale_type: String,
     val thumb: ThumbModel,
-    val episode_cnt: Int,
     val book_cover_url: String?,
     val creators: List<CreatorModel>,
     val age_rating: Int?,
