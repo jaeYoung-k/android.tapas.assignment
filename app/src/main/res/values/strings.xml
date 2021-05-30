@@ -4,5 +4,6 @@
     <string name="like">like</string>
     <string name="loading">Loading</string>
 
+    <string name="invalid_access_message">"잘못된 접근입니다."</string>
     <string name="common_error_message">다시 시도 해주세요.</string>
 </resources>
